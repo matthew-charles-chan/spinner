@@ -1,15 +1,15 @@
 //process.stdout.write('hello from spinner1.js... \rhey\n');
-const spinner = function () {
-  spinnerChars = ['|','/','-','\\','|']
-  for (let i =0; i < spinnerChars.length; i++) {
+const spinner = function() {
+  const spinnerChars = ['|','/','-','\\','|'];
+  for (let i = 0; i < spinnerChars.length; i++) {
     setTimeout(() => {
-      process.stdout.write(`\r ${spinnerChars[i]}`)
+      process.stdout.write(`\r ${spinnerChars[i]}`);
       if (i === spinnerChars.length - 1) {
-        process.stdout.write('\n')
+        process.stdout.write('\n');
       }
-    }, 170 * i)
+    }, 170 * i);
   }
-} 
+};
 spinner();
 
 
@@ -30,7 +30,7 @@ spinner();
 
 // setTimeout(() => {
 //   // Need to escape the backslash since it's a special character.
-//   process.stdout.write('\r\\   '); 
+//   process.stdout.write('\r\\   ');
 // }, 700);
 
 // setTimeout(() => {
